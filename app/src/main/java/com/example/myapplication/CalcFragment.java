@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -65,6 +66,10 @@ public class CalcFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_calc, container, false);
         SeekBar seekBar = view.findViewById(R.id.seekBar);
         TextView textView = view.findViewById(R.id.months);
+        EditText editsum = view.findViewById(R.id.editSum);
+
+        int x = Integer.parseInt(editsum.getText().toString());
+        double d = Double.parseDouble(editsum.getText().toString());
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
